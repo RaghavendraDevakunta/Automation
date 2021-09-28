@@ -22,18 +22,13 @@ public void login() {
 WebDriver driver=new FirefoxDriver();
 driver.manage().window().maximize();
 		
-		  driver.get("https://www.browserstack.com/users/sign_in"); 
-		  
-		
-		  WebElement
-		  
-		  username=driver.findElement(By.id("user_email_Login")); WebElement
-		  password=driver.findElement(By.id("user_password")); WebElement
-		  login=driver.findElement(By.name("commit"));
-		  username.sendKeys("abc@gmail.com"); password.sendKeys("your_password");
+		  driver.get("https://www.gmail.com"); 
+		  WebElement username=driver.findElement(By.id("identifierId")); 
+		  WebElement password=driver.findElement(By.id("r1319639550415188")); 
+		  WebElement login=driver.findElement(By.name("passwordNext"));
+		  username.sendKeys("identifierId"); password.sendKeys("password");
 		  login.click();
-		 
-String actualUrl="https://live.browserstack.com/dashboard";
+String actualUrl="//div[@id=':1t']";
 String expectedUrl= driver.getCurrentUrl();
 Assert.assertEquals(expectedUrl,actualUrl);
 }
